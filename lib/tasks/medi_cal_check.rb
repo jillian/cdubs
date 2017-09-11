@@ -5,8 +5,8 @@ require 'activerecord'
 
 login_url = "https://www.medi-cal.ca.gov/Eligibility/Login.asp"
 eligibility_url = "https://www.medi-cal.ca.gov/Eligibility/Eligibility.asp"
-username  = %MC_LOGIN%
-password  = %MC_PW%
+username  = ENV["MC_LOGIN"]
+password  = ENV["MC_PW"]
 
 
 b = Watir::Browser.start login_url
@@ -42,8 +42,8 @@ CSV.foreach('patients.csv', headers: true) do |row|
 end
 
 
-ActiveRecord::Base.establish_connection ({  :adapter => "postgres",
-  :host => "localhost",
-  :username => "postgres",
-  :password => "redbaron50",
-  :database => "db/development.db"})
+# ActiveRecord::Base.establish_connection ({  :adapter => "postgres",
+#   :host => "localhost",
+#   :username => "postgres",
+#   :password => "redbaron50",
+#   :database => "db/development.db"})
