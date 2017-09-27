@@ -11,5 +11,6 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery-ui/autocomplete
 //= require turbolinks
 //= require_tree .

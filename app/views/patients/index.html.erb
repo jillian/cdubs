@@ -1,5 +1,16 @@
+<script>
+  $(function() {
+    new app.Books;
+  });
+</script>
+
+ <div class="patient-search">
+   <input type="text" id="patient-search-txt" autofocus>
+   <div class="results" id="patient-search-txt-search-results"></div>
+ </div>
+
+
 <% Patient.all.each do |p| %>
   <%= p.first_name %> </br>
  <% end %>
 
- 
