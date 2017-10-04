@@ -12,8 +12,8 @@ default: &default
 development:
   <<: *default
   database: db/development
-  username: postgres
-  password: redbaron50
+  username: 
+  password: 
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -21,8 +21,8 @@ development:
 test:
   adapter: sqlite3
   database: db/test.sqlite3
-  username: postgres
-  password: redbaron50
+  username: 
+  password: 
 
 production:
   <<: *default
